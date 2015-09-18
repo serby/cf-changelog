@@ -3,7 +3,7 @@
   "description": "Creates a markdown changelog from git commits.",
   "version": "1.0.0",
   "publishConfig": {
-    "registry": "http://registry.npmjs.org"
+    "registry": "http://npm.clockte.ch"
   },
   "bin": {
     "update-changelog": "update-changelog.sh"
