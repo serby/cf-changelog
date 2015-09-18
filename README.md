@@ -2,20 +2,30 @@
 
 Creates a markdown changelog from git commits.
 
-[![build status](https://secure.travis-ci.org/serby/cf-changelog.svg)](http://travis-ci.org/serby/cf-changelog)
-[![dependency status](https://david-dm.org/serby/cf-changelog.svg)](https://david-dm.org/serby/cf-changelog)
+Merge commits will be omitted as will any that start with `^` or a number.
+
+`[PT #NNNNNNNN]` will be converted to pivotal tracker links and `[FD #NNNN]` will be converted to freshdesk links
 
 ## Installation
 
-```
-npm install --save cf-changelog
-```
+### For projects
 
-## Usage
+```
+npm install --save-dev cf-changelog
+```
+Then add `"update-changelog": "update-changelog"`  to your `scripts` in `package.json`
+
+### For global usage
+
+```
+npm install -g cf-changelog
+```
 
 ## Credits
 [Paul Serby](https://github.com/serby/)
 
+Follow me on twitter [@serby](http://twitter.com/serby)
+
 ## License
 
-New BSD
+ISC
