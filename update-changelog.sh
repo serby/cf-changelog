@@ -33,6 +33,6 @@ for i in `seq 1 ${#header}`; do
 done
 echo >> $changelog.tmp
 
-(git log $last..HEAD --no-merges --format='* %s' | egrep -v '^\* (>|\d)' | sort -u | sed -e 's/\[PT #\(.*\)]/[PT \1](https:\/\/www.pivotaltracker.com\/story\/show\/\1)/' | sed -e 's/\[FD #\(.*\)]/[FD \1](https:\/\/clocklimited.freshdesk.com\/helpdesk\/tickets\/\1)/' ; echo '' ; cat $changelog)  >> $changelog.tmp
+(git log $last..HEAD --no-merges --format='* %s' | egrep -v '^\* (>|\d|Revert)' | sort -u | sed -e 's/\[PT #\(.*\)]/[PT \1](https:\/\/www.pivotaltracker.com\/story\/show\/\1)/' | sed -e 's/\[FD #\(.*\)]/[FD \1](https:\/\/clocklimited.freshdesk.com\/helpdesk\/tickets\/\1)/' ; echo '' ; cat $changelog)  >> $changelog.tmp
 
 mv $changelog.tmp $changelog
