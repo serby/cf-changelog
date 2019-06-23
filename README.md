@@ -1,5 +1,7 @@
 # cf-changelog
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/cf-changelog.svg)](https://greenkeeper.io/)
+
 Creates a markdown changelog from git commits.
 
 Merge commits will be omitted as will any that start with `^` or a number.
